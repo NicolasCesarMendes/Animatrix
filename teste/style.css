@@ -1,0 +1,205 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: #f1f1f1;
+  min-height: 100vh;
+}
+
+.topo {
+  text-align: center;
+  padding: 30px 20px;
+  background: rgba(0, 0, 0, 0.4);
+  border-bottom: 2px solid #ff4081;
+}
+
+.topo h1 {
+  font-size: 2.5rem;
+}
+
+.topo h1 span {
+  color: #ff4081;
+}
+
+.topo p {
+  color: #bbb;
+  margin-top: 6px;
+}
+
+.controles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.label-idade {
+  font-weight: bold;
+  color: #fff;
+}
+
+.botoes-idade {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.btn-idade {
+  padding: 8px 18px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  border: 2px solid rgba(255, 64, 129, 0.4);
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s;
+}
+
+.btn-idade:hover {
+  background: rgba(255, 64, 129, 0.2);
+  border-color: #ff4081;
+  transform: translateY(-2px);
+}
+
+.btn-idade.ativo {
+  background: #ff4081;
+  border-color: #ff4081;
+  color: #fff;
+  box-shadow: 0 0 15px rgba(255, 64, 129, 0.6);
+}
+
+.catalogo {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.card {
+  background: #1e1e2f;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(255, 64, 129, 0.4);
+}
+
+.card .midia {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.card-conteudo {
+  padding: 16px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 6px;
+}
+
+.card .genero {
+  color: #90caf9;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+}
+
+.card .nota {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  width: fit-content;
+}
+
+.card .resumo {
+  font-size: 0.9rem;
+  color: #ddd;
+  margin-bottom: 10px;
+  flex: 1;
+}
+
+.card .curiosidade {
+  background: rgba(255, 235, 59, 0.1);
+  border-left: 3px solid #ffeb3b;
+  padding: 8px 10px;
+  font-size: 0.85rem;
+  border-radius: 4px;
+}
+
+.card .curiosidade strong {
+  color: #ffeb3b;
+}
+
+.card .censura {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #d32f2f;
+  color: white;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  z-index: 2;
+}
+
+.card-wrapper {
+  position: relative;
+}
+
+.card.restrito .midia,
+.card.restrito .resumo,
+.card.restrito .curiosidade {
+  filter: blur(8px);
+  user-select: none;
+  pointer-events: none;
+}
+
+.card.restrito .aviso-restrito {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ff5252;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  z-index: 3;
+  border-radius: 12px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 40px;
+}
