@@ -3,26 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Animatrix V2 - Catálogo de Animes</title>
+  <title>Animatrix V2 - Início</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header class="topo">
     <h1>Animatrix <span>V2</span></h1>
-    <p>Catálogo dinâmico de animes</p>
+    <p>Catálogo de animes</p>
   </header>
 
   <section class="controles">
-    <label for="idade">Sua idade:</label>
-    <input type="number" id="idade" min="0" max="120" placeholder="Digite sua idade" />
-    <button id="btnFiltrar">Aplicar</button>
-    <span id="contador"></span>
+    <span class="label-idade">Selecione sua faixa etária:</span>
+    <div class="botoes-idade">
+      <button class="btn-idade" data-idade="0">Livre</button>
+      <button class="btn-idade" data-idade="12">12+</button>
+      <button class="btn-idade" data-idade="14">14+</button>
+      <button class="btn-idade" data-idade="16">16+</button>
+      <button class="btn-idade" data-idade="18">18+</button>
+    </div>
   </section>
 
   <main id="catalogo" class="catalogo"></main>
 
   <footer>
-    <p>Atividade JS 2 — SENAI | Prof. Heber Castro</p>
+    <p>© 2026 Animatrix V2. Todos os direitos reservados.</p>
   </footer>
 
   <script src="script.js"></script>
